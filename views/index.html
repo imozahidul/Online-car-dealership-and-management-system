@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="../assets/css/style.css">
+    <title>CRUD Application</title>
+
+</head>
+<body>
+
+    <!-- header -->
+    <header id="header">
+        <nav>
+            <div class="container">
+                <div class="text-center">
+                    <a href="/" class="nav-brand text-dark">User Management System</a>
+                </div>
+            </div>
+        </nav>
+    </header>
+    <!-- /header -->
+
+    <!-- main section -->
+
+    <main id="site-main">
+        <div class="container">
+            <div class="box-nav d-flex justify-between">
+                <div id="nuser" class="box-nav d-flex justify-between"  style="border-radius: 10px;" >
+                    <a href="/add-user" class="border-shadow"  style="border-radius: 10px;">
+                        <scan  class="text-gradient">New User <i class="fa-regular fa-user"></i></scan>
+                    </a>
+                </div>
+            </div>
+            <!-- form handeling -->
+            <form action="/" method="post">
+                <table class="table">
+                    <thead class="thead-dark">
+                        <tr>
+                            <th>
+                                ID
+                            </th>
+                            <th>
+                                Name
+                            </th>
+                            <th>
+                                @Email
+                            </th>
+                            <th>
+                                Gender
+                            </th>
+                            <th>
+                                Status
+                            </th>
+                            <th>
+                                Action
+                            </th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>1</td>
+                            <td>Username</td>
+                            <td>example@gmail.com</td>
+                            <td>Male</td>
+                            <td>Active</td>
+                            <td>
+                                <a href="#" id="b_ud" class="btn border-shadow update"style="border-radius: 10px;">
+                                    <span id="b_ud"  >
+                                        <i class="fas fa-pencil-alt"></i>
+                                    </span>
+                                </a>
+                                <a href="#" id="b_ud" class="btn border-shadow delete" style="border-radius: 10px;">
+                                    <span  id="b_ud">
+                                        <i  class="fas fa-times"></i>
+                                    </span>
+                                </a>
+                            </td>
+                        </tr>
+                    </tbody>
+                </table>
+
+            </form>
+
+        </div>
+    </main>
+
+    <!-- /main section -->
+
+</body>
+</html>

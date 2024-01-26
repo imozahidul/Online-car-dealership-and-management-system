@@ -1,0 +1,65 @@
+ <!-- form handling -->
+ <form action="/api/users" method="POST" id="add_user" enctype="multipart/form-data">
+    <div class="new_user">
+        <div class="form-group">
+            
+                <label for="formFile" class="form-label">Upload Image</label>
+                <input name="image" class="form-control" type="file" id="formFile">
+            
+        </div>
+        <div class="form-group">
+            <label for="Brand" class="text-light">Brand</label>
+            <input type="hidden" name="id" value="">
+            <input type="text" name="brand" value="" placeholder="Audi">
+        </div>
+        <div class="form-group">
+            <label for="Model" class="text-light">Model</label>
+            <input type="text" name="model" value="" placeholder="Q8">
+        </div>
+        <div class="form-group">
+            <label for="color" class="text-light">Color</label>
+            <input type="text" name="color" value="" placeholder="Red">
+        </div>
+        <div class="form-group">
+            <label for="Price" class="text-light">Price</label>
+            <input type="text" name="price" value="" placeholder="$50000">
+        </div>
+        <div class="form-group">
+            <label for="type" class="text-light">Type</label>
+            <div class="radio inline">
+                <input type="radio" id="radio-2" name="type" value="SUV" >
+                <label for="radio-2" class="radio-label">SUV</label>
+            </div>
+            <div class="radio inline">
+                <input type="radio" id="radio-3" name="type" value="Sedan" >
+                <label for="radio-3" class="radio-label">Sedan</label>
+            </div>
+            <div class="radio inline">
+                <input type="radio" id="radio-4" name="type" value="Sports" >
+                <label for="radio-4" class="radio-label">Sports</label>
+            </div>
+            <div class="radio inline">
+                <input type="radio" id="radio-5" name="type" value="SuperCar" >
+                <label for="radio-5" class="radio-label">Super car</label>
+            </div>
+        </div>
+        
+
+        <div class="form-group">
+            <label for="type" class="text-light">Status</label>
+            <div class="radio inline">
+                <input type="radio" id="radio-6" name="status" value="Sold" >
+                <label for="radio-6" class="radio-label">Sold</label>
+            </div>
+            <div class="radio inline">
+                <input type="radio" id="radio-7" name="status" value="Unsold" >
+                <label for="radio-7" class="radio-label">Unsold</label>
+            </div>
+        </div>
+
+        <div class="form-group">
+            <button type="submit"  class="btn save-btn update" >Add</button>
+        </div>
+
+    </div>
+</form>

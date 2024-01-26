@@ -1,0 +1,70 @@
+
+    <!-- include header -->
+
+    <%-include('include/_header') %>
+
+<!-- /include hader -->
+<main id="site-main">
+    <div class="container" >
+        <div class="box-nav d-flex justify-between">
+            <div id="nuser" class="box-nav d-flex justify-between"  style="border-radius: 10px;" >
+                <a href="/add-user" class="border-shadow"  style="border-radius: 10px;">
+                    <scan  class="text-gradient"> <i class="fa-solid fa-car-side"></i> New Cars</scan>
+                </a>
+            </div>
+            <div id="nuser" class="box-nav d-flex justify-between"  style="border-radius: 10px;" >
+                <a  href="/" class="border-shadow"  style="border-radius: 10px;"><scan  class="text-gradient"> <i class="fa-solid fa-house"></i> Home</scan></a>
+                    
+                </a>
+            </div>
+            
+        </div>
+        <!-- form handeling -->
+        <form action="/" method="post">
+            <table class="table">
+                <thead class="thead-dark">
+                    <tr>
+                        <th>
+                            ID
+                        </th>
+                        <th>
+                            Brand
+                        </th>
+                        <th>
+                            Model
+                        </th>
+                        <th>
+                            
+                            Color
+                        </th>
+                        <th>
+                            
+                            Price
+                        </th>
+                        <th>
+                            Type
+                        </th>
+                        <th>
+                            Status
+                        </th>
+                        <th>
+                            Action
+                        </th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <%-include('include/_show') %> 
+                </tbody>
+            </table>
+
+        </form>
+
+    </div>
+</main>
+
+
+<!-- include footer -->
+
+<%-include('include/_footer') %>
+
+<!-- /include footer-->

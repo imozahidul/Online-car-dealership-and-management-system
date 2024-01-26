@@ -1,0 +1,100 @@
+<!-- include header -->
+<%- include('include/_header') %>
+    <!-- /include header -->
+
+    <!-- Main Site -->
+    <main id="site-main">
+        <div class="container">
+            <div class="box-nav d-flex justify-between">
+                <div id="nuser" class="box-nav d-flex justify-between" style="border-radius: 10px;">
+                    <a href="/dashboard" class="border-shadow" style="border-radius: 10px;">
+                        <scan class="text-gradient"> <i class="fa-solid fa-car-side"></i> All Cars</scan>
+                    </a>
+                </div>
+            </div>
+            <div class="form-title text-center">
+                <h2 class="text-dark">Update Car</h2>
+                <span class="text-light">Use the below form to Update a Car</span>
+            </div>
+
+            <!-- add user form -->
+            <!-- form handling -->
+            <form method="POST" id="update_user" enctype="multipart/form-data">
+                <div class="new_user">
+                    <div class="form-group">
+
+                        <label for="formFile" class="form-label">Upload Image</label>
+                        <input name="image" class="form-control" type="file" id="formFile">
+
+                    </div>
+
+                    <div class="form-group">
+                        <label for="brand" class="text-light">Brand</label>
+                        <input type="hidden" name="id" value="<%= user._id %>">
+                        <input type="text" name="brand" value="<%= user.brand %>" placeholder="Audi">
+                    </div>
+                    <div class="form-group">
+                        <label for="model" class="text-light">Model</label>
+                        <input type="text" name="model" value="<%= user.model %>" placeholder="Q8">
+                    </div>
+                    <div class="form-group">
+                        <label for="color" class="text-light">Color</label>
+                        <input type="text" name="color" value="<%= user.color %>" placeholder="Red">
+                    </div>
+                    <div class="form-group">
+                        <label for="price" class="text-light">Price</label>
+                        <input type="text" name="price" value="<%= user.price %>" placeholder="$50000">
+                    </div>
+                    <div class="form-group">
+                        <label for="type" class="text-light">Type</label>
+                        <div class="radio inline">
+                            <input type="radio" id="radio-2" name="type" value="SUV" <%=user.type=='SUV' ? 'checked'
+                                : '' %>>
+                            <label for="radio-2" class="radio-label">SUV</label>
+                        </div>
+                        <div class="radio inline">
+                            <input type="radio" id="radio-3" name="type" value="Sedan" <%=user.type=='Sedan' ? 'checked'
+                                : '' %>>
+                            <label for="radio-3" class="radio-label">Sedan</label>
+                        </div>
+                        <div class="radio inline">
+                            <input type="radio" id="radio-4" name="type" value="Sports" <%=user.type=='Sports'
+                                ? 'checked' : '' %>>
+                            <label for="radio-4" class="radio-label">Sports</label>
+                        </div>
+                        <div class="radio inline">
+                            <input type="radio" id="radio-5" name="type" value="SuperCar" <%=user.type=='SuperCar'
+                                ? 'checked' : '' %>>
+                            <label for="radio-5" class="radio-label">Super car</label>
+                        </div>
+                    </div>
+
+
+                    <div class="form-group">
+                        <label for="status" class="text-light">Status</label>
+                        <div class="radio inline">
+                            <input type="radio" id="radio-6" name="status" value="Sold" <%= user.status == 'Sold'
+                                ? 'checked' : '' %>>
+                            <label for="radio-6" class="radio-label">Sold</label>
+                        </div>
+                        <div class="radio inline">
+                            <input type="radio" id="radio-7" name="status" value="Unsold" <%= user.status == 'Unsold'
+                                ? 'checked' : '' %>>
+                            <label for="radio-7" class="radio-label">Unsold</label>
+                        </div>
+                    </div>
+
+                    <div class="form-group">
+                        <button type="submit" class="btn save-btn update">Update</button>
+                    </div>
+
+                </div>
+            </form>
+
+        </div>
+    </main>
+    <!-- /Main Site -->
+
+    <!-- include footer -->
+    <%- include('include/_footer') %>
+        <!-- /include footer -->
